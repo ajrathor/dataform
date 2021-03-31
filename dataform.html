@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function Valid() {
+				var name =
+					document.forms["RegForm"]["Name"];
+				var email =
+					document.forms["RegForm"]["EMail"];
+				var phone =
+					document.forms["RegForm"]["Telephone"];
+	
+				if (name.value == "") {
+					window.alert("Please enter your name.");
+					name.focus();
+					return false;
+				}
+
+
+				if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-                      zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
+                      {
+                         return (true)
+                      }
+                   alert("You have entered an invalid email address!")
+                   return (false)
+				if (phone.value == "") {
+					window.alert(
+					"Please enter your mobile number.");
+					phone.focus();
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+
+		<style>
+                       div {
+				box-sizing: border-box;
+				width: 100%;
+				border: 100px solid white;
+				float: left;
+				align-content: center;
+				align-items: center;
+			}
+
+			
+			form {
+				margin: 0 auto;
+				width: 400px;
+			}
+		</style>
+	</head>
+
+	<body>
+    <div style="background-color:#ADD8E6";"align-content: center";>
+		<h3 style="text-align: center; text-decoration: underline;">Details Form</h3>
+		<form name="RegForm" action="/submit.php"
+			onsubmit="return Valid()" method="post">
+			<p>Name: <input type="text"
+							size="40" name="Name" /></p>
+			
+			<p>Email ID: <input type="text"
+							size="40" name="EMail" /></p>
+	
+			<p>Mob. No.: <input type="text"
+						size="40" name="Telephone" /></p>
+
+			<br />
+				<p  style="text-align:center;"><input type="submit"
+					value="SUBMIT" name="Submit" /></p></p>
+<input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Enter name here">
+      <button type="submit">Search</button>
+   <!-- ordered list -->
+    <p>
+<p>
+
+		</form>
+        </div>
+	</body>
+</html>
+
+
